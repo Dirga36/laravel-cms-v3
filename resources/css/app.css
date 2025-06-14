@@ -1,4 +1,6 @@
 @import 'tailwindcss';
+@import '../../vendor/livewire/flux/dist/flux.css';
+@custom-variant dark (&:where(.dark, .dark *));
 
 @plugin '@tailwindcss/forms';
 
@@ -9,6 +11,7 @@
   --font-sans:
     Figtree, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-sans: Inter, sans-serif;
 }
 
 /*
