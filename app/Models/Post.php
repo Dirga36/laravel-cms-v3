@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
@@ -14,7 +14,7 @@ class Post extends Model
         'content',
         'thumbnail',
         'user_id',
-        'category_id'
+        'category_id',
     ];
 
     public function user()

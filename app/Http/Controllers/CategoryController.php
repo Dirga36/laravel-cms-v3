@@ -37,7 +37,6 @@ class CategoryController extends Controller
         return redirect()->route('dashboard')->with('success', 'Category created successfully.');
     }
 
-
     /**
      * Display the specified resource.
      */

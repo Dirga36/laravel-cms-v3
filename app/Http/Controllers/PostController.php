@@ -47,7 +47,6 @@ class PostController extends Controller
         return redirect()->route('dashboard')->with('success', 'Post created successfully.');
     }
 
-
     /**
      * Display the specified resource.
      */
