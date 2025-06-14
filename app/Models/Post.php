@@ -13,6 +13,8 @@ class Post extends Model
         'title',
         'content',
         'thumbnail',
+        'user_id',
+        'category_id'
     ];
 
     public function user()
