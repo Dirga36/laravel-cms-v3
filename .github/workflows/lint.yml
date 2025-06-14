@@ -3,10 +3,12 @@ name: linter
 on:
   push:
     branches:
+      - CI-integrate
       - develop
       - main
   pull_request:
     branches:
+      - CI-integrate
       - develop
       - main
 
