@@ -1,31 +1,14 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <!-- ... -->
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-
-    <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
     @fluxAppearance
 </head>
-
-<body class="font-sans antialiased min-h-screen bg-white dark:bg-zinc-800">
-    <flux:sidebar sticky stashable
-        class="bg-zinc-50 dark:bg-zinc-900 border-r rtl:border-r-0 rtl:border-l border-zinc-200 dark:border-zinc-700">
+<body class="min-h-screen bg-white dark:bg-zinc-800">
+    <flux:sidebar sticky stashable class="bg-zinc-50 dark:bg-zinc-900 border-r rtl:border-r-0 rtl:border-l border-zinc-200 dark:border-zinc-700">
         <flux:sidebar.toggle class="lg:hidden" icon="x-mark" />
 
-        <flux:brand href="#" logo="https://fluxui.dev/img/demo/logo.png" name="Acme Inc."
-            class="px-2 dark:hidden" />
-        <flux:brand href="#" logo="https://fluxui.dev/img/demo/dark-mode-logo.png" name="Acme Inc."
-            class="px-2 hidden dark:flex" />
+        <flux:brand href="#" logo="https://fluxui.dev/img/demo/logo.png" name="Acme Inc." class="px-2 dark:hidden" />
+        <flux:brand href="#" logo="https://fluxui.dev/img/demo/dark-mode-logo.png" name="Acme Inc." class="px-2 hidden dark:flex" />
 
         <flux:input as="button" variant="filled" placeholder="Search..." icon="magnifying-glass" />
 
@@ -95,33 +78,13 @@
         </flux:navbar>
     </flux:header>
 
-    <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
-        <livewire:layout.navigation />
+    <flux:main>
+        <flux:heading size="xl" level="1">Good afternoon, Olivia</flux:heading>
 
-        <!-- Page Heading -->
-        @if (isset($header))
-            <header class="bg-white dark:bg-gray-800 shadow-sm">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                    {{ $header }}
-                </div>
-            </header>
-        @endif
+        <flux:text class="mb-6 mt-2 text-base">Here's what's new today</flux:text>
 
-        <!-- Page Content -->
-        <flux:main>
-            <flux:heading size="xl" level="1">Good afternoon, Olivia</flux:heading>
-
-            <flux:text class="mb-6 mt-2 text-base">Here's what's new today</flux:text>
-
-            <flux:separator variant="subtle" />
-
-            <main>
-                {{ $slot }}
-            </main>
-        </flux:main>
-    </div>
+        <flux:separator variant="subtle" />
+    </flux:main>
 
     @fluxScripts
 </body>
-
-</html>

@@ -10,6 +10,11 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xs sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     {{ __("You're logged in!") }}
+                    <flux:heading size="xl" level="1">Good afternoon, Olivia</flux:heading>
+
+                    <flux:text class="mb-6 mt-2 text-base">Here's what's new today</flux:text>
+
+                    <flux:separator variant="subtle" />
                 </div>
             </div>
         </div>
