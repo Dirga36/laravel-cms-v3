@@ -17,12 +17,12 @@ class Post extends Model
         'category_id',
     ];
 
-    public function users()
+    public function user()
     {
         return $this->belongsTo(User::class);
     }
 
-    public function categories()
+    public function categorie()
     {
         return $this->belongsTo(Category::class);
     }
