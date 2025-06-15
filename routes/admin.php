@@ -1,8 +1,8 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
-use App\Http\Middleware\AdminMiddleware;
 use App\Http\Controllers\PostController;
+use App\Http\Middleware\AdminMiddleware;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware(['auth', AdminMiddleware::class])->group(function () {
@@ -10,4 +10,4 @@ Route::middleware(['auth', AdminMiddleware::class])->group(function () {
     Route::resource('categories', CategoryController::class);
 });
 
-require __DIR__ . '/auth.php';
+require __DIR__.'/auth.php';
